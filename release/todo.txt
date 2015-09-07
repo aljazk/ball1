@@ -1,0 +1,14 @@
+bugs:
+	-leaving map crashes path finding algorithm
+	-multiple path findings crash
+	-turret keeps moving even if he cant see
+
+things to do:
+		menu:
+			- starting page
+			- buttons
+		ai:
+			- class for every type
+			- better ai
+		lighting:
+			- make it faster
