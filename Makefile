@@ -4,7 +4,10 @@ LFLAGS=-static \
 	-lsfml-graphics-s -lsfml-window-s -lsfml-system-s \
 	-ljpeg -lglew32 -lfreetype \
 	-lgdi32 -lopengl32 -lwinmm
-FILES=main.cpp Menu.cpp Ball.cpp Enemies.cpp Map.cpp Light.cpp enemies/Basick.cpp enemies/Bomb.cpp enemies/Turret.cpp enemies/ai/VertQuad.cpp enemies/ai/Vision.cpp enemies/ai/Bullet.cpp enemies/ai/Astar.cpp
+FILES=main.cpp Menu.cpp Ball.cpp Enemies.cpp Map.cpp Light.cpp \
+	enemies/Basick.cpp enemies/Bomb.cpp enemies/Turret.cpp \
+	enemies/ai/VertQuad.cpp enemies/ai/Vision.cpp enemies/ai/Bullet.cpp enemies/ai/FindPath.cpp \
+	enemies/ai/astar/Astar.cpp enemies/ai/astar/Node.cpp
 
 OBJS=$(patsubst %,build/%.o,$(basename $(FILES)))
 .PHONY: all clean

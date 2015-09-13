@@ -1,10 +1,10 @@
-#include "Astar.hpp"
+#include "FindPath.hpp"
 
-Astar::Astar(){
+FindPath::FindPath(){
 	
 }
 
-void Astar::setWindowSize(sf::Vector2u newWindowSize){
+void FindPath::setWindowSize(sf::Vector2u newWindowSize){
 	windowSize = newWindowSize;
 }
 
@@ -18,7 +18,7 @@ void printMap(std::vector< std::vector<char> > map){
 	std::cout << "map printed" << std::endl;
 }
 
-void Astar::setWall(std::vector<sf::Vector2i> newWall){
+void FindPath::setWall(std::vector<sf::Vector2i> newWall){
 	std::vector<sf::Vector2i> wall;
 	wall = newWall;
 	grid.resize(windowSize.x/GRID_SIZE+2);
@@ -51,13 +51,8 @@ int calcCost(int nx, int ny, int ex, int ey){
 	return dist*10;
 }
 
-struct Node{
-	sf::Vector2u pos;
-	int cost, gcost;
-	int parent;
-};
-
-bool Astar::findPath(sf::Vector2f sTarget, sf::Vector2f sStart){
+/*
+bool FindPath::findPath(sf::Vector2f sTarget, sf::Vector2f sStart){
 	sf::Vector2u target = sf::Vector2u((int)sTarget.x/GRID_SIZE+1, (int)sTarget.y/GRID_SIZE+1);
 	sf::Vector2u start = sf::Vector2u((int)sStart.x/GRID_SIZE+1, (int)sStart.y/GRID_SIZE+1);
 	grid[start.x][start.y] = 1;
@@ -159,3 +154,4 @@ bool Astar::findPath(sf::Vector2f sTarget, sf::Vector2f sStart){
 	}
 	return 0;
 }
+*/

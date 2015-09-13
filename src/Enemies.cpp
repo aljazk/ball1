@@ -47,7 +47,6 @@ void Enemies::drawEnemy(sf::RenderWindow& window){
 void Enemies::setWalls(std::vector<sf::Vector2i> newWall){
 	vision.setWall(newWall);
 	astar.setWall(newWall);
-	astar.findPath(sf::Vector2f(10,10), sf::Vector2f(700,700));
 }
 
 void Enemies::setWindowSize(sf::Vector2u newWindowSize){

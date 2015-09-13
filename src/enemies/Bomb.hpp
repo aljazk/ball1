@@ -3,7 +3,7 @@
 
 #include "ai/VertQuad.hpp"
 #include "ai/Vision.hpp"
-#include "ai/Astar.hpp"
+#include "ai/Astar/Astar.hpp"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <cmath>

@@ -6,13 +6,14 @@
 #include "enemies/Bomb.hpp"
 #include "enemies/Turret.hpp"
 #include "enemies/ai/Bullet.hpp"
+#include "enemies/ai/FindPath.hpp"
 
 class Enemies{
 		std::vector<Basick> basick;
 		std::vector<Bomb> bomb;
 		std::vector<Turret> turret;
 		Vision vision;
-		Astar astar;
+		FindPath astar;
 		std::vector<Bullet> bullets;
 		sf::Texture texture;
 		sf::Sprite sprite;
