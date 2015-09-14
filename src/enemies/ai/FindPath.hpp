@@ -16,7 +16,7 @@ class FindPath{
 		FindPath();
 		void setWindowSize(sf::Vector2u);
 		void setWall(std::vector<sf::Vector2i>);
-		//bool FindPath(sf::Vector2f, sf::Vector2f);
+		bool findPath(sf::Vector2f, sf::Vector2f);
 };
 
 #endif

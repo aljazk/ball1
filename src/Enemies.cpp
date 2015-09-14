@@ -46,11 +46,9 @@ void Enemies::drawEnemy(sf::RenderWindow& window){
 
 void Enemies::setWalls(std::vector<sf::Vector2i> newWall){
 	vision.setWall(newWall);
-	astar.setWall(newWall);
 }
 
 void Enemies::setWindowSize(sf::Vector2u newWindowSize){
-	astar.setWindowSize(newWindowSize);
 }
 
 void Enemies::move(float eclipsed){

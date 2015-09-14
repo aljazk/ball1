@@ -51,6 +51,19 @@ int calcCost(int nx, int ny, int ex, int ey){
 	return dist*10;
 }
 
+bool FindPath::findPath(sf::Vector2f sTarget, sf::Vector2f sStart){
+	sf::Vector2u target = sf::Vector2u((int)sTarget.x/GRID_SIZE+1, (int)sTarget.y/GRID_SIZE+1);
+	sf::Vector2u start = sf::Vector2u((int)sStart.x/GRID_SIZE+1, (int)sStart.y/GRID_SIZE+1);
+	Astar astar(start.x, start.y, target.x, target.y);
+	grid[start.x][start.y] = 'S';
+	grid[target.x][target.y] = 'T';
+	printMap(grid);
+	
+	int snode = astar.getLowCost();
+	std::cout << snode << std::endl;
+	return 0;
+}
+
 /*
 bool FindPath::findPath(sf::Vector2f sTarget, sf::Vector2f sStart){
 	sf::Vector2u target = sf::Vector2u((int)sTarget.x/GRID_SIZE+1, (int)sTarget.y/GRID_SIZE+1);
